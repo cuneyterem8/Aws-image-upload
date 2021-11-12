@@ -17,7 +17,7 @@ public class AmazonConfig {
                 "AKIA2LAX36YNMAIB5VRO",
                 "BedO3vBQUTjyfnmjVe8Jbu2koX8YJ5nVkGWjMAjZ"
         );
-        return AmazonS3ClientBuilder.standard().withCredentials(
+        return AmazonS3ClientBuilder.standard().withRegion("eu-central-1").withCredentials(
                 new AWSStaticCredentialsProvider(awsCredentials)).build();
     }
 }
